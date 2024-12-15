@@ -21,6 +21,7 @@ OSBD is a community-driven initiative. We welcome everyone to contribute whether
 
 ## Quick guide
 `npm install`
+`npm run start`
 
 TODO::
 

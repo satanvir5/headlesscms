@@ -1,5 +1,7 @@
 import express, { Express } from 'express';
 import requestLogger from './shared/middlewares/requestLogger';
+import indexRouter from './routes/index';
+import path from 'path';
 import './shared/utils/consoleOverride';
 
 class App {
@@ -43,16 +45,17 @@ class App {
    * Handles tasks such as authentication, logging, error handling, CORS, etc.
    * @private
    */
-  private middlewares(){
+  private middlewares() {
   }
-  
-/**
- * Sets up all application routes.
- * Defines the endpoints and their corresponding request handlers.
- * Ensures that each route is properly linked to the associated controller logic.
- * @private
- */
+
+  /**
+   * Sets up all application routes.
+   * Defines the endpoints and their corresponding request handlers.
+   * Ensures that each route is properly linked to the associated controller logic.
+   * @private
+   */
   private routes() {
+    this.app.use(indexRouter);
   }
 
   /**
@@ -61,7 +64,9 @@ class App {
    * Enables the application to render dynamic pages based on templates.
    * @private
    */
-  private views(){
+  private views() {
+    this.app.set('views', path.join(__dirname, './views'));
+    this.app.set('view engine', 'ejs');
   }
 }
 

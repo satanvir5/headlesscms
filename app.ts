@@ -1,5 +1,6 @@
 import express, { Express } from 'express';
 import requestLogger from './shared/middlewares/requestLogger';
+import './shared/utils/consoleOverride';
 
 class App {
   public app: Express;

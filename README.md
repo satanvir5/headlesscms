@@ -1,4 +1,3 @@
-
 <p align="center">
 
 <img src="./docs/static/OSBD_logo.svg" width="250">

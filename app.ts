@@ -1,4 +1,5 @@
 import express, { Express } from 'express';
+import requestLogger from './shared/middlewares/requestLogger';
 
 class App {
   public app: Express;
@@ -23,6 +24,7 @@ class App {
    * @function
    */
   private config() {
+    this.app.use(requestLogger);
   }
 
   /**

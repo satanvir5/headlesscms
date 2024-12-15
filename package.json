@@ -16,11 +16,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/dotenv": "^8.2.3",
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.10.2",
-    "@types/pino": "^7.0.5",
     "express": "^4.21.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"

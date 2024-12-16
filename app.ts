@@ -1,6 +1,6 @@
 import express, { Express } from 'express';
 import requestLogger from './shared/middlewares/requestLogger';
-import indexRouter from './routes/index';
+import indexRouter from './core/routes/index';
 import path from 'path';
 import './shared/utils/consoleOverride';
 
